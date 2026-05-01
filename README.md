@@ -12,7 +12,8 @@ That's the whole idea.
 
 In 2023 I built RCF V0 for the **Airbnb Guest Interactions Chatbot**. The chatbot was hallucinating answers about pool depth, Wi-Fi passwords, fire-emergency procedures, check-out times - anything where being *almost right* is worse than admitting "I don't know."
 
-I stopped trying to fine-tune the model. I wrote the answers down as markdown, keyed by the kind of question being asked, and told the model to **look up first, generate second**. Hallucinations on covered topics dropped by **over 90%**.
+
+Prompted the model to **look up first, generate second**. Hallucinations on covered topics dropped by **over 90%**.
 
 See [`examples/airbnb-2023/`](./examples/airbnb-2023/) for the original files, reformatted in RCF's `Context Relevancy → Value` shape.
 
@@ -140,8 +141,6 @@ A single section file can hold many Context Relevancy entries. The agent picks t
 - Not a package - there is nothing to install.
 - Not a framework - your agent does the lookup, RCF is just the data.
 - Not opinionated about file count, depth, or naming inside each section. Use what works.
-
-V1 will add a retrieval layer (embeddings, scoring, conflict resolution between competing Values). V0 is intentionally just files and a prompt, because that's all the Airbnb version was, and that's what made it work.
 
 ---
 
